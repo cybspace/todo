@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TO-DO LIST</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400&amp;subset=cyrillic" rel="stylesheet">
+    <link href="resources/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <div id="lists-navigation" class="lists-navigation ">
+            <span title="show saved lists" id="show-lists">show</span>
+            <span title="save current list" id="save-current-list">save</span>
+            <span title="create new list" id="new-list">new</span>
+        </div>
+        <div id="lists-selections-container" class="hidden">
+            <div class="lists-navigation">
+                <span title="hide saved lists" id="hide-lists">hide</span>
+                <span title="load selected list" id="load-selected-list">load</span>
+                <span title="load selected list" id="remove-selected-list">remove</span>
+            </div>
+            <div id="list-selections">
+                <p>no lists were saved yet...</p>
+            </div>
+
+        </div>
+        <h1 id="to-do-list-name" class="list-header"></h1>
+        <input id="to-do-list-name-editor" class="list-header hidden" type="text">
+        <input id="input-text" class="text-input" type="text" required>
+        <div class="switch-container">
+            <label class="switch">
+                <input id="list-type" type="checkbox">    
+                <div></div>
+            </label>
+        </div>
+        <div id="to-do" class="list-container">
+            <ul id="to-do-list" class="list"></ul>
+            <span title="show list of done items" id="task-history-header">history <span id="task-history-header-count"></span></span>
+            <div id="task-history" class="hidden">
+                <ul id="task-history-list" class="list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="message" class="message"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="resources/js/script.js"></script>
+</body>
+
+</html>
